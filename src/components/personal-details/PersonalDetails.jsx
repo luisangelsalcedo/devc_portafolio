@@ -1,10 +1,11 @@
 import PropTypes from 'prop-types';
 import './PersonalDetails.scss';
+import { DIRECTION_COLUMN, DIRECTION_ROW } from '../../helpers/constants';
 
-export function PersonalDetails({ data }) {
+export function PersonalDetails({ data, direction }) {
   return (
     <section className='personal-details'>
-      <div className='panel'>
+      <div className={direction ? `panel panel--${direction}` : 'panel'}>
         <div className='panel__image'>IMAGE</div>
         <div className='panel__content'>
           <div className='panel__content-header'>
@@ -33,4 +34,9 @@ PersonalDetails.propTypes = {
     image: PropTypes.string,
     description: PropTypes.arrayOf(PropTypes.object),
   }),
+  direction: PropTypes.oneOf([DIRECTION_ROW, DIRECTION_COLUMN]),
+};
+
+PersonalDetails.defaultProps = {
+  direction: DIRECTION_ROW,
 };

@@ -51,4 +51,26 @@
 
     }
 
+    // vertical version
+
+    &--column{
+        width: 395px;
+        flex-direction: column;
+
+        .panel__image{
+            width: 100%;
+            height: 343px;  
+            margin-bottom: pxToRem(23);
+        }
+
+        .panel__content{
+            &-header{
+                flex-direction: column;
+                margin-bottom: 0;
+                & > div{
+                    margin-bottom: pxToRem(31);
+                }
+            }
+        }
+    }
 }

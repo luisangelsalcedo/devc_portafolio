@@ -1,4 +1,5 @@
 import { PersonalDetails } from '../components';
+import { DIRECTION_COLUMN } from '../helpers/constants';
 
 const person = {
   name: 'Billy Pearson',
@@ -22,6 +23,7 @@ export function App() {
   return (
     <>
       <PersonalDetails data={person} />
+      <PersonalDetails data={person} direction={DIRECTION_COLUMN} />
     </>
   );
 }
