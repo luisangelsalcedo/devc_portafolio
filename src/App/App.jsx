@@ -21,7 +21,7 @@ const person = {
 export function App() {
   return (
     <>
-      <PersonalDetails></PersonalDetails>
+      <PersonalDetails data={person} />
     </>
   );
 }
