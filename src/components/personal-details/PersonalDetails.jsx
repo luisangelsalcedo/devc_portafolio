@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
-import './PersonalDetails.scss';
 import { DIRECTION_COLUMN, DIRECTION_ROW } from '../../helpers/constants';
 import { Panel } from '../elements';
+import './PersonalDetails.scss';
 
 export function PersonalDetails({ data, direction }) {
   return (
@@ -30,7 +30,7 @@ PersonalDetails.propTypes = {
     email: PropTypes.string,
     phone: PropTypes.string,
     image: PropTypes.string,
-    description: PropTypes.arrayOf(PropTypes.object),
+    description: PropTypes.string,
   }),
   direction: PropTypes.oneOf([DIRECTION_ROW, DIRECTION_COLUMN]),
 };
