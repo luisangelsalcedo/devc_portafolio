@@ -1,0 +1,46 @@
+@import '../../assets/scss/vars.scss';
+
+.personal-details{
+    .panel__image{
+        width: 272px;
+        height: 266px;
+    }
+    .panel__content{
+        &-header{
+            display: flex;
+            justify-content: space-between;
+            
+            h1{            
+                color: $gray2;
+                font-size: pxToRem(24);
+                font-weight: 600;
+                margin-bottom: pxToRem(6);
+            }
+            .icon{
+                color: $gray2;
+                margin-bottom: pxToRem(10);
+            }
+        }
+        &-body{
+            p{
+                margin-bottom: pxToRem(20);
+            }
+        }
+    }
+
+    .panel--column{
+        width: 395px;
+
+        .panel__image{
+            width: auto;
+            height: 343px;
+        }
+        .panel__content{
+            &-header{
+                & > div{
+                    margin-bottom: pxToRem(31);
+                }
+            }
+        }
+    }
+}
