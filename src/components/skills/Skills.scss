@@ -48,4 +48,26 @@
             }            
         }
     }
+
+    .panel--column{
+        width: 395px;
+        
+        .skills__list{
+            display: flex;
+            flex-direction: column;            
+
+            &-item{
+               padding-left: 0;
+               padding-right: 0;
+               width: auto;
+
+               &-label{
+                    flex: 1;
+                }
+                &-range{
+                    flex: 2;
+                }  
+            }
+        }
+    }
 }
