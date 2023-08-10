@@ -1,10 +1,10 @@
 import PropTypes from 'prop-types';
+import { useId } from 'react';
 import { Panel } from '../elements';
 import { DIRECTION_COLUMN, DIRECTION_ROW } from '../../helpers/constants';
 import './Skills.scss';
 
 function SkillItem({ children, range }) {
-  console.log(range);
   return (
     <div className='skills__list-item'>
       <div className='skills__list-item-label'>{children}</div>
@@ -24,17 +24,20 @@ SkillItem.defaultProps = {
   range: 0,
 };
 
-export function Skills({ direction }) {
+export function Skills({ data, direction }) {
+  const id = useId();
+
   return (
     <section className='skills'>
       <Panel direction={direction}>
         <Panel.Header>FRONT END</Panel.Header>
         <Panel.Body>
           <div className='skills__list'>
-            <Skills.Item range={100}>LABEL</Skills.Item>
-            <Skills.Item range={100}>LABEL</Skills.Item>
-            <Skills.Item range={100}>LABEL</Skills.Item>
-            <Skills.Item range={100}>LABEL</Skills.Item>
+            {data.map(({ label, range }) => (
+              <Skills.Item range={range} key={id + label}>
+                {label}
+              </Skills.Item>
+            ))}
           </div>
         </Panel.Body>
       </Panel>
@@ -42,6 +45,9 @@ export function Skills({ direction }) {
   );
 }
 Skills.propTypes = {
+  data: PropTypes.arrayOf(
+    PropTypes.shape({ label: PropTypes.string, rate: PropTypes.number })
+  ),
   direction: PropTypes.oneOf([DIRECTION_ROW, DIRECTION_COLUMN]),
 };
 
