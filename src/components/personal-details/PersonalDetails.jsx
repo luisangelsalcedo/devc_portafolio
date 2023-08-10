@@ -30,7 +30,7 @@ PersonalDetails.propTypes = {
     email: PropTypes.string,
     phone: PropTypes.string,
     image: PropTypes.string,
-    description: PropTypes.string,
+    description: PropTypes.arrayOf(PropTypes.object),
   }),
   direction: PropTypes.oneOf([DIRECTION_ROW, DIRECTION_COLUMN]),
 };
