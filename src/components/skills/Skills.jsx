@@ -15,10 +15,20 @@ export function Skills({ direction }) {
               <div className='skills__list-item-range'>
                 <div style={{ width: '100%' }}></div>
               </div>
+            </div>
+            <div className='skills__list-item'>
               <div className='skills__list-item-label'>LABEL</div>
               <div className='skills__list-item-range'>
                 <div style={{ width: '100%' }}></div>
               </div>
+            </div>
+            <div className='skills__list-item'>
+              <div className='skills__list-item-label'>LABEL</div>
+              <div className='skills__list-item-range'>
+                <div style={{ width: '100%' }}></div>
+              </div>
+            </div>
+            <div className='skills__list-item'>
               <div className='skills__list-item-label'>LABEL</div>
               <div className='skills__list-item-range'>
                 <div style={{ width: '100%' }}></div>
